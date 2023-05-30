@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reservation</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<label id="title">Your favorites flights are: </label>
+<button id = "home_button"><a href = "first_page">Home</a></button>
+<div>
+  <div class="center-container">
+    <div class="diplay-block">
+      <div [style]="'display: flex'">
+        <table>
+          <thead>
+          <tr>
+            <th>Flight Number</th>
+            <th>Destination</th>
+            <th>Departure</th>
+            <th>Price</th>
+            <th>Remove from favorite</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let flight of flightList">
+            <td>{{ flight.number}}</td>
+            <td>{{flight.arrival}}</td>
+            <td>{{ flight.departure}}</td>
+            <td>{{ flight.price }}</td>
+            <td><button id = "delete_buton" mat-icon-button type = submit (click)="removeFavorite(flight.number)">
+              <mat-icon>favorite_border</mat-icon>
+            </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

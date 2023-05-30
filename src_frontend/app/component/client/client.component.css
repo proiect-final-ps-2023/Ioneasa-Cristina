@@ -1,0 +1,137 @@
+body{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("images/background5.png");
+
+}
+#lista{
+  margin-top: 200px;
+}
+.element
+{
+  outline: 2px dot-dash black;
+  background-color: rgb(224,224, 224, 0.7);
+  margin-top: 30px;
+  width: 700px;
+  margin-left: -600px;
+  border-radius: 5%;
+  border-color: azure;
+  border-width: 5px;
+}
+.departure{
+  font-size: 25px;
+}
+.arrival{
+  font-size: 25px;
+}
+#title{
+  margin-left: 520px;
+  font-size: 50px;
+  margin-top: 300px;
+  width: 700px;
+  color: azure;
+}
+.arrival_time{
+  font-size: 25px;
+}
+.time_departure{
+  font-size: 25px;
+}
+.duration{
+  font-size: 25px;
+  margin-top: 10px;
+}
+.number{
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.price{
+  font-size: 20px;
+}
+.container_arrival{
+  margin-left: 400px;
+  margin-top: -70px;
+}
+.container{
+  margin-top: -200px;
+  margin-left: 140px;
+}
+#arrival{
+  width: 200px;
+  height: 40px;
+}
+#button_filter{
+  width: 200px;
+  height: 40px;
+}
+#departure{
+  width: 200px;
+  height: 40px;
+}
+#button_departure{
+  width: 200px;
+  height: 40px;
+}
+#button_sort{
+  width: 200px;
+  height: 40px;
+}
+#airplane{
+  margin-left: 130px;
+  margin-top: -80px;
+}
+.price{
+  font-size: 25px;
+  margin-top: 50px;
+}
+.duration{
+  margin-top: -40px;
+}
+#button_buy{
+  margin-left: 475px;
+  margin-top: -30px;
+  width: 150px;
+  height: 40px;
+  color: azure;
+  background-color: cornflowerblue;
+  font-size: 30px;
+  justify-content: center;
+}
+#cos{
+  margin-left: 1520px;
+  margin-top: -120px;
+  width: 200px;
+  font-size: 25px;
+}
+#favorite{
+  margin-left: 1320px;
+  margin-top: -80px;
+  width: 200px;
+  font-size: 25px;
+}
+#seat{
+  margin-left: 450px;
+}
+
+#logout{
+  margin-top: 50px;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(235, 235, 235);
+  color: white;
+  font-size: 20px;
+  border-color: white;
+  border-width: 3px;
+}
+#feedback{
+  margin-top: -1700px;
+  margin-left: 150px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+favorite_button{
+  float: right;
+}

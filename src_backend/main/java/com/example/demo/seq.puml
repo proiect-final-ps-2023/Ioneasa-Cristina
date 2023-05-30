@@ -1,0 +1,20 @@
+@startuml
+actor User
+participant HotelSystem
+participant Hotel
+User -> HotelSystem: login(username, password)
+HotelSystem -> HotelSystem: Validate user credentials
+HotelSystem --> User: User object
+User -> HotelSystem: register(username, password)
+HotelSystem -> HotelSystem: Create new User
+HotelSystem --> User: User object
+User -> HotelSystem: searchHotels()
+HotelSystem -> HotelSystem: Retrieve list of hotels
+HotelSystem --> User: List<Hotel>
+User -> HotelSystem: makeReservation(user, hotel, room)
+HotelSystem -> HotelSystem: Create new Reservation
+HotelSystem --> User: Reservation object
+User -> HotelSystem: rateHotel(user, hotel, score, comment)
+HotelSystem -> HotelSystem: Create new Rating
+HotelSystem --> User: Rating object
+@enduml

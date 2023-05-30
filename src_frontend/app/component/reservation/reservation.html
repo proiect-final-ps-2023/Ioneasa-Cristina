@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reservation</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<label id="title">Your reservation are: </label>
+<button id = "home_button"><a href = "first_page">Home</a></button>
+<div>
+  <div class="center-container">
+    <div class="diplay-block">
+      <div [style]="'display: flex'">
+        <table>
+          <thead>
+          <tr>
+            <th>Ticket Number</th>
+            <th>Flight Number</th>
+            <th>Passenger Name</th>
+            <th>Seat</th>
+            <th>Price</th>
+            <th>Anulate</th>
+            <th>Download</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let ticket of ticketsList">
+            <td>{{ ticket.noTicket }}</td>
+            <td>{{ticket.numberFlight}}</td>
+            <td>{{ ticket.passagerName }}</td>
+            <td>{{ ticket.seat }}</td>
+            <td>{{ ticket.price }}</td>
+            <td><button id = "delete_buton" mat-icon-button color="warn" aria-label="Delete" type = submit (click)="deleteTicket(ticket.noTicket)">
+              <mat-icon>delete</mat-icon>
+            </button>
+            </td>
+            <td><button id = "print_buton" mat-icon-button aria-label="Print" type = submit (click)="downloadTicket(ticket.noTicket)">
+              <mat-icon>print</mat-icon>
+            </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

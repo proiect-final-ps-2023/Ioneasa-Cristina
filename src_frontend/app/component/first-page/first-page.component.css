@@ -1,0 +1,43 @@
+body{
+  background-image: url("images/background2.png");
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container{
+  width: 550px;
+  float: right;
+  margin-top: 80px;
+}
+
+h1{
+  float:left;
+  margin-top: 0px;
+  font-size: 35px;
+  color: white;
+  border-color: black;
+  border-radius: 20%;
+  background-color: white;
+  display: inline;
+}
+h2{
+  margin-left: 23px;
+  font-size: 35px;
+  color: white;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 20%;
+  background-color: white;
+  width: 100px;
+  display: inline;
+}
+h3{
+  float:right;
+  font-size: 35px;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 20%;
+  background-color: white;
+  width: 100px;
+  display: inline;
+}

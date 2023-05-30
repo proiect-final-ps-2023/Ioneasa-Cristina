@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin page</title>
+  <link rel = "stylesheet" href="admin.component.css">
+</head>
+<body>
+<div class="container">
+  <h1 id = "header">New Flight</h1>
+  <form id = "flight">
+
+    <label for="id">flight ID</label><br>
+    <input type="text" [(ngModel)]="flight.id" id="id" name="id"><br>
+
+    <label for="number">Number flight</label><br>
+    <input type="text" [(ngModel)]="flight.number" id="number" name="number"><br>
+
+    <label for="departure">Departure</label><br>
+    <input type="text" [(ngModel)]="flight.departure" id="departure" name="departure"><br>
+
+    <label for="arrival">Arrival</label><br>
+    <input type="arrival" [(ngModel)]="flight.arrival" id="arrival" name="arrival"><br>
+
+    <label for="date_time">Hour Departure</label><br>
+    <input type="text"  [(ngModel)]="flight.date_time" id="date_time" name="date_time"><br>
+
+    <label for="date_time_arrival">Hour Arrival</label><br>
+    <input type="text"  [(ngModel)]="flight.date_time_arrival" id="date_time_arrival" name="date_time"><br>
+
+    <label for="duration">Duration of Flight</label><br>
+    <input type="number"  [(ngModel)]="flight.duration" id="duration" name="duration"><br>
+
+    <label for="nr_seats">Number seats</label><br>
+    <input type="number" [(ngModel)]="flight.nr_seats"  id="nr_seats" name="nr_seats"><br>
+
+    <label for="price">Price</label><br>
+    <input type="number" [(ngModel)]="flight.price"  id="price" name="price"><br>
+
+    <button type="submit" (click)="deleteFlight(flight.id)">delete Flight</button>
+   <button type="submit" (click)="insertFlight()">Add Flight</button>
+  </form>
+  <form id = "lista_clienti">
+    <Label id = "title">Clients online now</Label>
+    <mat-list id="lista">
+      <mat-list-item class="element"  *ngFor = "let user of usersList">
+
+        <div mat-line >{{user.name}}</div>
+        <div mat-line class ="email">{{user.email}}</div>
+        <br><br>
+      </mat-list-item>
+
+    </mat-list>
+  </form>
+
+</div>
+
+</body>
+</html>
+

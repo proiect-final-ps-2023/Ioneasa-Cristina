@@ -1,0 +1,42 @@
+body{
+  display: flex;
+  height: 110vh;
+  width: 100vw;
+  background-image: url("images/background6.png");
+}
+
+.diplay-block{
+  margin-top: 200px;
+  margin-left: -1200px;
+  color: blue;
+  font-size: 30px;
+  background-color: rgb(240, 240, 240);
+  width: 1000px;
+
+}
+tr, tbody {
+  border: 3px solid black;
+}
+#title{
+  margin-left: 800px;
+  margin-top: 100px;
+  width: 400px;
+  font-size: 40px;
+  color: white;
+}
+
+#home_button{
+  height: 50px;
+  width: 100px;
+  font-size: 30px;
+  margin-left: 500px;
+  font-weight: bold;
+  color: blue;
+}
+#delete_buton{
+  size: 50px;
+  margin-left: 30px;
+}
+#print_buton{
+  margin-left: 40px;
+}

@@ -1,0 +1,104 @@
+@startuml
+class Flight {
+    -id: Long
+    -number: String
+    -departure: String
+    -arrival: String
+    -date_time: LocalDateTime
+    -date_time_arrival: LocalDateTime
+    -duration: float
+    -nr_seats: int
+    -price: int
+}
+
+class Ticket {
+    -id: Long
+    -name: String
+    -email: String
+    -age: int
+    -flightToTicket: Flight
+}
+
+class User {
+    -id: Long
+    -name: String
+    -email: String
+    -password: String
+    -age: int
+    -tickets: List<Ticket>
+}
+
+class FlightController {
+    <<RestController>>
+    -flightService: FlightService
+    +getFlights(): List<Flight>
+    +getFlightById(id: Long): Flight
+    +createFlight(flight: Flight): Flight
+    +updateFlight(id: Long, flight: Flight): Flight
+    +deleteFlight(id: Long)
+}
+
+class TicketController {
+    <<RestController>>
+    -ticketService: TicketService
+    +getTickets(): List<Ticket>
+    +getTicketById(id: Long): Ticket
+    +createTicket(ticket: Ticket): Ticket
+    +updateTicket(id: Long, ticket: Ticket): Ticket
+    +deleteTicket(id: Long)
+}
+
+class UserController {
+    <<RestController>>
+    -UserService: UserService
+
+    +getUsersByEmail(id: Long): User
+    +createUser(user: User): User
+    +updateUser(id: Long, user: User): User
+}
+
+class FlightService {
+    -flightRepository: FlightRepository
+    +getFlights(): List<Flight>
+    +getFlightById(id: Long): Flight
+    +createFlight(flight: Flight): Flight
+    +updateFlight(id: Long, flight: Flight): Flight
+    +deleteFlight(id: Long)
+}
+
+class TicketService {
+    -ticketRepository: TicketRepository
+    +getTickets(): List<Ticket>
+    +getTicketById(id: Long): Ticket
+    +createTicket(ticket: Ticket): Ticket
+    +updateTicket(id: Long, ticket: Ticket): Ticket
+    +deleteTicket(id: Long)
+}
+
+class UserService {
+    -UserRepository: UserRepository
+    +getUsers(): List<User>
+    +getUserById(id: Long): User
+    +createUser(user: User): User
+    +updatePassword(id: Long, user: User): User
+}
+
+FlightController --> FlightService
+FlightService --> FlightRepository
+
+TicketController --> TicketService
+TicketService --> TicketRepository
+
+UserController --> UserService
+UserService --> UserRepository
+
+Flight *-- Ticket
+User *-- Ticket
+
+Flight -- Ticket : has >
+User -- Ticket : has >
+Ticket -- FlightService : uses >
+Ticket -- UserService : uses >
+FlightService ..> FlightRepository : uses >
+UserService ..> UserRepository : uses >
+@enduml
